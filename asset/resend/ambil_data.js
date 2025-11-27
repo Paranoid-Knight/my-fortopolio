@@ -1,32 +1,30 @@
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // cegah reload page
+  e.preventDefault();
 
-  // ambil value dari input/textarea
   const nama = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
   try {
-    const res = await fetch("/kirim-email", {
+    const res = await fetch("/.netlify/functions/kirimEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nama, email, message })
     });
 
     const data = await res.json();
-
     if(data.success){
       alert("Email berhasil terkirim!");
-      form.reset(); // reset form setelah terkirim
+      form.reset();
     } else {
-      alert("Gagal mengirim email, cek console.");
+      alert("Gagal mengirim email");
       console.log(data);
     }
 
-  } catch (err) {
+  } catch(err) {
     console.error(err);
-    alert("Error server, cek console");
+    alert("Error server");
   }
 });
