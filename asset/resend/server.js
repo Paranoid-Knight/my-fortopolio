@@ -14,7 +14,7 @@ app.post("/kirim-email", async (req, res) => {
   try {
     const { data, error } = await resend.emails.send({
       from: "Form <onboarding@resend.dev>", // pakai domain Resend untuk testing
-      to: "emailkamu@gmail.com", // ganti dengan email tujuan
+      to: "darkprince0456@gmail.com",
       subject: `Pesan dari ${nama}`,
       html: `
         <p><b>Nama:</b> ${nama}</p>
