@@ -1,0 +1,38 @@
+@media (max-width: 950px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .opsi-nav a {
+        margin-left: 12px;
+    }
+
+    .skill {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .project div[class^="kotak"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .catatan-about-me .text {
+        width: 90%;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+}

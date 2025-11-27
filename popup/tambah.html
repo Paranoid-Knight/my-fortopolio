@@ -1,0 +1,22 @@
+<div class="popup-bg">
+    <div class="popup-box">
+        <h2>Tambah Data</h2>
+
+        <label>Nama:</label>
+        <input type="text" placeholder="Masukkan nama">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Masukkan email">
+
+        <div class="popup-btn">
+            <button onclick="closePopup()">Batal</button>
+            <button class="primary">Simpan</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function closePopup() {
+    document.getElementById('popup').innerHTML = "";
+}
+</script>

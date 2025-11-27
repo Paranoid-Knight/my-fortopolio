@@ -1,0 +1,22 @@
+<div class="popup-bg">
+    <div class="popup-box">
+        <h2>Edit Data</h2>
+
+        <label>Nama:</label>
+        <input type="text" value="Nama Lama">
+
+        <label>Email:</label>
+        <input type="email" value="email@lama.com">
+
+        <div class="popup-btn">
+            <button onclick="closePopup()">Batal</button>
+            <button class="primary">Update</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function closePopup() {
+    document.getElementById('popup').innerHTML = "";
+}
+</script>

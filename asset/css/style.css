@@ -1,0 +1,202 @@
+:root {
+    --color-primary:  #0A4D68;
+    --color-secondary:  #123C69; 
+    --color-accent:  #6BC5C7; 
+    --color-dark-main:  #06283D; 
+    --color-soft-bg:  #F0F5F9; 
+    --color-TEXT:  #EAEAEA; 
+    --color-TEXT-hitam:  #0D0D0D;
+    --color-Deep-Ice-Blue:  #0E7490; 
+    --color-Subtle-Midnight-Cyan:  #0F3A4A; 
+    --color-Nordic-Blue: #1A5F7A; 
+    --color-Glacier-Blue: #2E8A99; 
+    --color-Cold-Slate-Teal: #3F8299; 
+    --color-Soft-Arctic-Blue: #89C2D9; 
+    --color-Elegant-Deep-Sky: #468FAF; 
+    --color-Royal-Shadow-Navy: #1B263B; 
+    --color-Steel-Calm-Blue: #415A77; 
+    --color-Smokey-Ice-Grey: #778DA9; 
+    --color-Polar-Soft-White: #D9EAF2; 
+    --color-Faded-Frost-Blue: #C5D8E8; 
+    --color-Muted-Arctic-Grey: #9DB4C0; 
+    --kondisi-posisi:absolute;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-TEXT);
+}
+
+body {
+    background: var(--color-Subtle-Midnight-Cyan);
+    color: var(--text);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background: var(--color-primary);
+}
+
+nav .icon a {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-right: 12px;
+    transition: 0.2s;
+    color: var(--color-accent);
+}
+
+nav .icon a:hover {
+    color: var(--accent);
+}
+
+nav .nama-tengah {
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    color: var(--primary);
+    font-family: 'Exo 2';
+}
+
+nav .opsi-nav a {
+    margin-left: 24px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+nav .opsi-nav a:hover {
+    color: var(--primary);
+}
+
+.display-home {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.foto-1 {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.etalase .kotak {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    background: var(--bg);
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: var(--color-Deep-Ice-Blue);
+}
+
+
+.etalase .text .nama {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.etalase .text .bio-singkat {
+    font-size: 0.95rem;
+    color: #333;
+    font-family: 'Varela Round';
+}
+
+.foto-2 {
+    width: 80px;
+    height: 120px;
+    /* object-fit: cover; */
+    border-radius: 8px;
+    border: 1px black solid;
+}
+
+
+.donwload-cv {
+    margin-top: 1.5rem;
+}
+
+.cv {
+    width: fit-content;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    /* background: var(--color-secondary); */
+    color: var(--color-TEXT);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background: var(--color-secondary);
+    gap: 10px;
+}
+
+.cv .donwload {
+    background: var(--color-Deep-Ice-Blue);
+    padding: 5px 12px;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.cv .donwload:hover {
+    background: var(--color-Glacier-Blue);
+}
+
+.display-about-me {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.display-about-me .judul {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    color: var(--color-TEXT);
+    margin-top: 6rem;
+}
+
+.catatan-about-me {
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    background: var(--color-Deep-Ice-Blue);
+    font-weight: 500;
+}
+
+.catatan-about-me .text {
+    color: var(--color-TEXT);
+
+}
+
+.text {
+    color: var(--color-TEXT-hitam);
+}

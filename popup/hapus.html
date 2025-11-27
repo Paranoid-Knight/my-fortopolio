@@ -1,0 +1,17 @@
+<div class="popup-bg">
+    <div class="popup-box small">
+        <h2>Hapus Data?</h2>
+        <p>Yakin ingin menghapus data ini?</p>
+
+        <div class="popup-btn">
+            <button onclick="closePopup()">Tidak</button>
+            <button class="danger">Hapus</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function closePopup() {
+    document.getElementById('popup').innerHTML = "";
+}
+</script>

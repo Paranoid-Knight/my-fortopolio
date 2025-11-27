@@ -1,0 +1,108 @@
+:root {
+    --color-primary:  #0A4D68;
+    --color-secondary:  #123C69; 
+    --color-accent:  #6BC5C7; 
+    --color-dark-main:  #06283D; 
+    --color-soft-bg:  #F0F5F9; 
+    --color-TEXT:  #EAEAEA; 
+    --color-TEXT-hitam:  #0D0D0D;
+    --color-Deep-Ice-Blue:  #0E7490; 
+    --color-Subtle-Midnight-Cyan:  #0F3A4A; 
+    --color-Nordic-Blue: #1A5F7A; 
+    --color-Glacier-Blue: #2E8A99; 
+    --color-Cold-Slate-Teal: #3F8299; 
+    --color-Soft-Arctic-Blue: #89C2D9; 
+    --color-Elegant-Deep-Sky: #468FAF; 
+    --color-Royal-Shadow-Navy: #1B263B; 
+    --color-Steel-Calm-Blue: #415A77; 
+    --color-Smokey-Ice-Grey: #778DA9; 
+    --color-Polar-Soft-White: #D9EAF2; 
+    --color-Faded-Frost-Blue: #C5D8E8; 
+    --color-Muted-Arctic-Grey: #9DB4C0; 
+    --kondisi-posisi:absolute;
+}
+
+.display-contact {
+    margin-top: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contact {
+  width: 100%;
+  max-width: 450px;
+  background: var(--color-Polar-Soft-White);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.contact .judul {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0A4D68;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact label {
+  font-size: 14px;
+  color: #06283D;
+  font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: .2s;
+  background: #fdfdfd;
+  color: var(--color-TEXT-hitam);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #0A4D68;
+  outline: none;
+  background: #ffffff;
+}
+
+.contact textarea {
+  resize: none;
+  height: 130px;
+}
+
+#kirim {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 10px;
+  background: #0A4D68;     
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#kirim:hover {
+  background: #096084;     
+  transform: translateY(-2px);
+}
+
+#kirim:active {
+  transform: translateY(0px);
+  background: #063a4e;
+}
