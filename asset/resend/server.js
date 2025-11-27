@@ -1,13 +1,35 @@
-import express from 'express';
-import cors from 'cors';
-import { Resend } from 'resend';
-import dotenv from 'dotenv';
+import express from "express";
+import { Resend } from "resend";
+import 'dotenv/config';
 
-dotenv.config();
+const app = express();
+app.use(express.json());
+app.use(express.static("public")); // supaya index.html bisa diakses
 
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-const pesan = express(); // sekarang tipe-nya Express, ada .use()
-pesan.use(cors())
-pesan.use(express.json())
+app.post("/kirim-email", async (req, res) => {
+  const { nama, email, message } = req.body;
 
-const resend = Resend(process.env.)
+  try {
+    const { data, error } = await resend.emails.send({
+      from: "Form <onboarding@resend.dev>", // pakai domain Resend untuk testing
+      to: "emailkamu@gmail.com", // ganti dengan email tujuan
+      subject: `Pesan dari ${nama}`,
+      html: `
+        <p><b>Nama:</b> ${nama}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Pesan:</b> ${message}</p>
+      `,
+    });
+
+    if (error) return res.status(400).json(error);
+    res.json({ success: true, data });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+app.listen(3000, () => console.log("Server berjalan di http://localhost:3000"));
