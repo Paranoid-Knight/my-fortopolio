@@ -8,7 +8,7 @@ export async function handler(event, context) {
 
     const { data, error } = await resend.emails.send({
       from: "Form <onboarding@resend.dev>",
-      to: "darkprince0456@gmail.com",
+      to: "darkprince0456@gmail.com", // ganti email tujuan
       subject: `Pesan dari ${nama}`,
       html: `
         <p><b>Nama:</b> ${nama}</p>

@@ -15,6 +15,7 @@ form.addEventListener('submit', async (e) => {
     });
 
     const data = await res.json();
+
     if(data.success){
       alert("Email berhasil terkirim!");
       form.reset();
